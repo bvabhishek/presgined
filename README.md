@@ -3,7 +3,7 @@
 * Step 1: Change Directory
 
 ```bash
-cd /root/aws-security-training/s3/pre-signed-url
+cd /pre-signed-url
 ```
 * Step 2: Run `terraform init` to install related packages.
 
@@ -17,14 +17,14 @@ terraform init
 terraform apply -auto-approve
 ```
 
-* Step 4: In `PresignedBucketInfo` you will see a
+* Step 4: In `BucketInfo` you will see a
   - BucketName
   - URL
   - FileName
 
 * Step 5: create pre signed URL for the object
 ```bash
-aws s3 presign s3://<BucketName>/<fileName>
+aws s3 presign s3://<BucketName>/<fileName> --expires in 3600
 ```
 
 * Step 6: You will see a output with a URL
