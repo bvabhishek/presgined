@@ -22,7 +22,7 @@ resource "aws_s3_bucket_object" "example_object" {
   source = "seasides.jpeg"
 }
 
-output "s3bucketname" {
+output "BucketInfo" {
   value = {
     BucketName = aws_s3_bucket.example_bucket.bucket
     URL = format("https://s3.console.aws.amazon.com/s3/buckets/%s/?region=%s",aws_s3_bucket.example_bucket.bucket,var.aws_region)
@@ -31,6 +31,3 @@ output "s3bucketname" {
   }
 }
 
-https://presigned-pfv8y047ul.s3.us-west-2.amazonaws.com/seasides.jpeg
-
-https://s3bucketname.s3.us-west-2.amazonaws.com/seasides.jpeg
