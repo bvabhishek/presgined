@@ -27,7 +27,7 @@ output "BucketInfo" {
     BucketName = aws_s3_bucket.example_bucket.bucket
     URL = format("https://s3.console.aws.amazon.com/s3/buckets/%s/?region=%s",aws_s3_bucket.example_bucket.bucket,var.aws_region)
     arn        = aws_s3_bucket.example_bucket.arn
-    ObjectURL = aws_s3_bucket_object.example_object.website_endpoint
+    ObjectURL  = aws_s3_bucket.example_bucket.bucket
   }
 }
 
